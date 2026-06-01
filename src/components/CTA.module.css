@@ -1,0 +1,57 @@
+.section {
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+  padding: var(--section-py) 24px;
+  text-align: center;
+}
+
+.inner {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 5vw, 56px);
+  color: var(--white);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+
+.titleGold {
+  color: var(--gold);
+  margin-bottom: 32px;
+}
+
+.desc {
+  color: rgba(255,255,255,0.72);
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 48px;
+  max-width: 560px;
+}
+
+.btn {
+  background: var(--green);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 18px 52px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  margin-bottom: 24px;
+  transition: box-shadow var(--transition);
+}
+
+.guarantee {
+  color: rgba(255,255,255,0.48);
+  font-size: 14px;
+}

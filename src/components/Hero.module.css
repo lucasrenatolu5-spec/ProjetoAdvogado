@@ -1,0 +1,167 @@
+.hero {
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, var(--navy-light) 100%);
+  min-height: 100vh;
+  padding-top: 72px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.glowOrb {
+  position: absolute;
+  top: 15%;
+  right: 8%;
+  width: 560px;
+  height: 560px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245,166,35,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Left */
+.left {
+  flex: 1 1 460px;
+  max-width: 560px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245,166,35,0.13);
+  border: 1px solid rgba(245,166,35,0.4);
+  border-radius: 999px;
+  padding: 8px 20px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  margin-bottom: 28px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.1;
+  color: var(--white);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.titleGold {
+  color: var(--gold);
+  margin-bottom: 28px;
+}
+
+.subtitle {
+  color: rgba(255,255,255,0.75);
+  font-size: 17px;
+  line-height: 1.75;
+  margin-bottom: 44px;
+  max-width: 480px;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btnWhatsapp {
+  background: var(--green);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: box-shadow var(--transition);
+}
+
+.btnOutline {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,0.45);
+  border-radius: var(--radius-md);
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background var(--transition), border-color var(--transition);
+}
+.btnOutline:hover {
+  border-color: rgba(255,255,255,0.7);
+}
+
+/* Photo card */
+.photoCard {
+  flex: 1 1 340px;
+  max-width: 500px;
+}
+
+.photoFrame {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 3px solid rgba(245,166,35,0.55);
+  position: relative;
+}
+
+.photoPlaceholder {
+  width: 100%;
+  height: 420px;
+  background: linear-gradient(160deg, #2a3f8f 0%, #1a2a6c 50%, #0d1b4b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 110px;
+  opacity: 0.22;
+  /* REPLACE: use <img src="photo.jpg" alt="Dr. Fernando Silva" /> */
+}
+
+.nameCard {
+  background: rgba(26,42,108,0.96);
+  backdrop-filter: blur(8px);
+  padding: 18px 24px;
+}
+
+.nameCardName {
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.nameCardMeta {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .inner { padding: 64px 24px 80px; }
+  .photoCard { max-width: 100%; }
+  .photoPlaceholder { height: 340px; }
+}
+
+@media (max-width: 600px) {
+  .buttons { flex-direction: column; }
+  .btnWhatsapp, .btnOutline { text-align: center; justify-content: center; }
+  .photoPlaceholder { height: 280px; }
+}

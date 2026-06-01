@@ -1,0 +1,123 @@
+/* ─── CSS VARIABLES ─────────────────────────────────── */
+:root {
+  --navy-deep:   #0d1b4b;
+  --navy:        #1a2a6c;
+  --navy-light:  #243580;
+  --navy-mid:    #2c3e8f;
+  --gold:        #f5a623;
+  --gold-light:  #ffc04d;
+  --gold-subtle: rgba(245, 166, 35, 0.12);
+  --green:       #25d366;
+  --green-dark:  #1da851;
+  --white:       #ffffff;
+  --off-white:   #f4f6fb;
+  --gray-100:    #f3f4f6;
+  --gray-300:    #d1d5db;
+  --gray-500:    #6b7280;
+  --gray-700:    #374151;
+  --dark-text:   #1e293b;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  18px;
+  --radius-xl:  24px;
+
+  --shadow-sm:  0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md:  0 6px 24px rgba(0,0,0,0.10);
+  --shadow-lg:  0 16px 48px rgba(0,0,0,0.14);
+  --shadow-gold: 0 8px 32px rgba(245,166,35,0.25);
+
+  --transition: 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  --max-width: 1200px;
+  --section-py: 96px;
+}
+
+/* ─── RESET ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--dark-text);
+  background: var(--white);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+/* ─── SCROLLBAR ──────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--navy-deep); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* ─── UTILITIES ─────────────────────────────────────── */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-py {
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+}
+
+.text-gold  { color: var(--gold); }
+.text-white { color: var(--white); }
+.text-navy  { color: var(--navy-deep); }
+.text-gray  { color: var(--gray-500); }
+
+.font-display { font-family: var(--font-display); }
+.font-body    { font-family: var(--font-body); }
+
+/* ─── RESPONSIVE BREAKPOINTS ────────────────────────── */
+@media (max-width: 1024px) {
+  :root { --section-py: 80px; }
+}
+
+@media (max-width: 768px) {
+  :root { --section-py: 64px; }
+  .hide-mobile { display: none !important; }
+}
+
+@media (max-width: 480px) {
+  :root { --section-py: 56px; }
+}
+
+/* ─── SELECTION ─────────────────────────────────────── */
+::selection {
+  background: var(--gold);
+  color: var(--navy-deep);
+}
+
+/* ─── FOCUS ──────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}

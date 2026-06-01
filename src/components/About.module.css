@@ -1,0 +1,102 @@
+.section {
+  background: var(--white);
+  padding: var(--section-py) 24px;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  flex-wrap: wrap;
+}
+
+/* Photo */
+.photoWrap {
+  flex: 1 1 300px;
+  max-width: 420px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.14);
+  border: 3px solid var(--off-white);
+}
+
+.photoPlaceholder {
+  height: 520px;
+  background: linear-gradient(160deg, #2c3e70 0%, #1a2a6c 60%, #0d1b4b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  opacity: 0.22;
+  /* REPLACE: <img src="about-photo.jpg" alt="Dr. Fernando Silva" style="width:100%;height:100%;object-fit:cover" /> */
+}
+
+/* Content */
+.content {
+  flex: 1 1 380px;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4vw, 48px);
+  color: var(--navy-deep);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.oab {
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 28px;
+}
+
+.bio {
+  color: var(--gray-700);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.credentials {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.credItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.checkIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(37,211,102,0.13);
+  border: 2px solid var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--green);
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-weight: 700;
+}
+
+.credText {
+  color: var(--gray-700);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+@media (max-width: 768px) {
+  .inner { gap: 40px; }
+  .photoWrap { max-width: 100%; }
+  .photoPlaceholder { height: 340px; }
+}
