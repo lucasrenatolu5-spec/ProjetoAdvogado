@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import { fadeUp, slideInRight } from '../assets/variants'
 import { WHATSAPP_URL } from '../data'
 import styles from './Hero.module.css'
+import photo from '../assets/imagens/drFernando.jpg'
+
 
 export function Hero() {
   return (
@@ -100,7 +102,7 @@ export function Hero() {
           >
             {/* Replace this div with an <img> tag pointing to a real photo */}
             <div className={styles.photoPlaceholder}>
-              <span>👨‍⚖️</span>
+              <img src={photo} alt="foto do advogado Fernando" />
             </div>
             <div className={styles.nameCard}>
               <p className={styles.nameCardName}>Dr. Fernando Silva</p>

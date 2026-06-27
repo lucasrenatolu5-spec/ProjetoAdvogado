@@ -3,6 +3,7 @@ import { fadeUp, slideInLeft } from '../assets/variants'
 import { useInViewAnimation } from '../hooks/useInViewAnimation'
 import { CREDENTIALS } from '../data'
 import styles from './About.module.css'
+import photo from '../assets/imagens/drFernando2.jpg'
 
 export function About() {
   const { ref, isInView } = useInViewAnimation()
@@ -23,7 +24,7 @@ export function About() {
         >
           {/* Replace with real <img> */}
           <div className={styles.photoPlaceholder}>
-            <span>👨‍⚖️</span>
+            <img src={photo} alt="Dr. Fernando advogado" />
           </div>
         </motion.div>
 
